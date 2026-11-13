@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Sari-SariBusinessLogic\Sari-SariBusinessLogic.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Sari_SariBusinessLogic;
 
 namespace Sari_Sari_Inventory
 {
@@ -84,6 +84,40 @@ namespace Sari_Sari_Inventory
                 Console.Write("User Input: ");
                 checkLogin = Console.ReadLine();
             }
+        }
+
+        static int ProcessOwnerModule(string itemName, int itemStock)
+        {
+            Console.Write("Enter owner code: ");
+            string ownerInput = Console.ReadLine();
+
+            AuthenticationLogic businesslogic = new AuthenticationLogic();
+
+            if (businesslogic.IsOwnerCodeCorrect(ownerInput))
+            {
+                Console.Write("Enter the item name you want to restock: ");
+
+                string checkItemName = Console.ReadLine();
+
+                if (checkItemName == itemName)
+                {
+                    Console.Write("Enter quantity to add: ");
+                    int stockToAdd = Convert.ToInt16(Console.ReadLine());
+                    itemStock += stockToAdd;
+                }
+            }
+
+            return itemStock;
+        }
+    }
+
+    internal class AuthenticationLogic
+    {
+        private string ownerCode = "OWN2024";
+
+        public bool IsOwnerCodeCorrect(string ownerInput)
+        {
+            return ownerCode == ownerInput;
         }
     }
 }

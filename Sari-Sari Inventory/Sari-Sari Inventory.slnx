@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="../Sari-SariBusinessLogic/Sari-SariBusinessLogic.csproj" Id="4fc5895b-94f4-4405-b393-364ef7964373" />
+  <Project Path="../Sari-SariDataLogic/Sari-SariDataLogic.csproj" Id="07606fe7-65db-4a08-8053-9be90b1cdcd4" />
   <Project Path="Sari-Sari Inventory.csproj" />
 </Solution>
